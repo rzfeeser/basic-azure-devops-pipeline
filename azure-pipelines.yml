@@ -1,0 +1,78 @@
+# Author: @RZFeeser
+# Introduction to Azure DevOp Pipelines for Terraform
+#
+# Resources:
+# Examples by Microsoft - https://aka.ms/yaml
+
+# anytime "main" branch is modified
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: TerraformCLI@1
+  inputs:
+    command: 'version'
+    allowTelemetryCollection: false
+
+- task: TerraformCLI@1
+  inputs:
+    command: 'init'
+    allowTelemetryCollection: true
+    #environmentServiceName: 'test-sc'
+  displayName: 'terraform init - install providers'
+  env:
+    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
+    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
+    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+    ARM_TENANT_ID: $(ARM_TENANT_ID)
+
+- task: TerraformCLI@1
+  inputs:
+    command: 'validate'
+    allowTelemetryCollection: true
+    #environmentServiceName: 'test-sc'
+    runAzLogin: true
+  displayName: 'terraform validate - ensure valid configuration'
+  env:
+    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
+    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
+    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+    ARM_TENANT_ID: $(ARM_TENANT_ID)
+
+- task: TerraformCLI@1
+  inputs:
+    command: 'plan'
+    allowTelemetryCollection: true
+    #environmentServiceName: 'test-sc'
+    runAzLogin: true
+  displayName: 'terraform plan'
+  env:
+    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
+    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
+    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+    ARM_TENANT_ID: $(ARM_TENANT_ID)  
+- task: TerraformCLI@1
+  inputs:
+    command: 'apply'
+    allowTelemetryCollection: true
+    #environmentServiceName: 'test-sc'
+  displayName: 'terraform apply - run configuration'
+  env:
+    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
+    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
+    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+    ARM_TENANT_ID: $(ARM_TENANT_ID)
+- task: TerraformCLI@1
+  inputs:
+    command: 'destroy'
+    #environmentServiceName: 'test-sc'
+    allowTelemetryCollection: true
+  env:
+    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
+    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
+    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+    ARM_TENANT_ID: $(ARM_TENANT_ID)
