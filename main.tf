@@ -19,6 +19,11 @@ provider "azurerm" {
   # client_secret   = "upXYZ...C7Hg...Wi8YNrbhoX0BcE.ceDM...xx"
 }
 
+resource "azurerm_resource_group" "rg" {
+  name     = "testabc-pipeline"
+  location = "westus2"
+}
+
 resource "azurerm_network_security_group" "example" {
   name                = "ex-security-group"
   resource_group_name = azurerm_resource_group.rg.name      # Pointers create a DEPENDENCY on the RG existing
