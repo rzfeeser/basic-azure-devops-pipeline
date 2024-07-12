@@ -20,12 +20,6 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "Testing"
+  name     = "test-pipeline"
   location = "westus2"
-}
-
-resource "azurerm_network_security_group" "example" {
-  name                = "example-security-group"
-  resource_group_name = "Testing"
-  location            = "westus2"
 }
