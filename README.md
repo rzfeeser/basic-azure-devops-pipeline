@@ -3,8 +3,6 @@
 <!-- HEADER STYLE: CLASSIC -->
 <div align="center">
 
-<img src="https://miro.medium.com/v2/resize:fit:800/1*Ome-oSxDNx7mQxJFZJ-NJg.png" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
-
 # BASIC-AZURE-DEVOPS-PIPELINE
 
 <em></em>
@@ -44,60 +42,8 @@
 ---
 
 ## Overview
+This repository contains a Azure DevOps pipeline that runs a Terraform deploy.
 
-
-
----
-
-## Features
-
-<code>❯ REPLACE-ME</code>
-
----
-
-## Project Structure
-
-```sh
-└── basic-azure-devops-pipeline/
-    ├── LICENSE
-    ├── README.md
-    ├── azure-pipelines.yml
-    └── main.tf
-```
-
-### Project Index
-
-<details open>
-	<summary><b><code>BASIC-AZURE-DEVOPS-PIPELINE/</code></b></summary>
-	<!-- __root__ Submodule -->
-	<details>
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<div class='directory-path' style='padding: 8px 0; color: #666;'>
-				<code><b>⦿ __root__</b></code>
-			<table style='width: 100%; border-collapse: collapse;'>
-			<thead>
-				<tr style='background-color: #f8f9fa;'>
-					<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-					<th style='text-align: left; padding: 8px;'>Summary</th>
-				</tr>
-			</thead>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/rzfeeser/basic-azure-devops-pipeline/blob/master/LICENSE'>LICENSE</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/rzfeeser/basic-azure-devops-pipeline/blob/master/main.tf'>main.tf</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://github.com/rzfeeser/basic-azure-devops-pipeline/blob/master/azure-pipelines.yml'>azure-pipelines.yml</a></b></td>
-					<td style='padding: 8px;'>Code>❯ REPLACE-ME</code></td>
-				</tr>
-			</table>
-		</blockquote>
-	</details>
-</details>
 
 ---
 
@@ -109,46 +55,13 @@ This project requires the following dependencies:
 
 - **Programming Language:** Terraform
 
-### Installation
-
-Build basic-azure-devops-pipeline from the source and intsall dependencies:
-
-1. **Clone the repository:**
-
-    ```sh
-    ❯ git clone https://github.com/rzfeeser/basic-azure-devops-pipeline
-    ```
-
-2. **Navigate to the project directory:**
-
-    ```sh
-    ❯ cd basic-azure-devops-pipeline
-    ```
-
-3. **Install the dependencies:**
-
-echo 'INSERT-INSTALL-COMMAND-HERE'
-
-### Usage
-
-Run the project with:
-
-echo 'INSERT-RUN-COMMAND-HERE'
-
-### Testing
-
-Basic-azure-devops-pipeline uses the {__test_framework__} test framework. Run the test suite with:
-
-echo 'INSERT-TEST-COMMAND-HERE'
-
 ---
 
 ## Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
+- [X] **`Task 1`**: <strike>Create a stable Azure Pipeline.</strike>
+- [ ] **`Task 2`**: Improve documentation
+- [ ] **`Task 3`**: Become the very model of a modern Major-Gineral, with information vegetable, animal, and mineral
 ---
 
 ## Contributing
@@ -202,7 +115,7 @@ Basic-azure-devops-pipeline is protected under the [LICENSE](https://choosealice
 
 ## Acknowledgments
 
-- Credit `contributors`, `inspiration`, `references`, etc.
+- Created and maintained by Author @RZFeeser
 
 <div align="right">
 
