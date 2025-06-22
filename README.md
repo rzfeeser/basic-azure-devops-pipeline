@@ -58,7 +58,7 @@ This project requires the following dependencies:
 
 - [X] **`Task 1`**: <strike>Create a stable Azure Pipeline.</strike>
 - [ ] **`Task 2`**: Improve documentation
-- [ ] **`Task 3`**: Become the very model of a modern Major-Gineral, with information vegetable, animal, and mineral
+- [ ] **`Task 3`**: Become the very model of a modern Major-General, with information vegetable, animal, and mineral
 ---
 
 ## Contributing
