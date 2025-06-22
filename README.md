@@ -1,8 +1,5 @@
 <div id="top">
 
-<!-- HEADER STYLE: CLASSIC -->
-<div align="center">
-
 # BASIC-AZURE-DEVOPS-PIPELINE
 
 <em></em>
